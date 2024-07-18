@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'objet Event</title>
+    <style>
+        div{
+            background: #29B;
+            border: 1px solid orange;
+            padding: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>L'objet Event</h1>
+    <div id="div1">
+        <p id="p1">Qui est le declencheur ? Le porteur d'évènement?</p>
+    </div>
+    <script>
+        var div1 = document.getElementById('div1');
+        var p1 = document.getElementById('p1');
+
+        //div1.addEventListener('click', Message);
+        div1.addEventListener('click', TexteD, true);
+        p1.addEventListener('click', TexteP, true);
+
+        /*function Message(event){
+            this.innerHTML = 'Element déclencheur : ' + event.target + 
+            '<br>Element portant l\évènement : ' + event.currentTarget;
+        }
+        */ 
+
+        /*
+        function Message(e){
+            this.innerHTML = "Type d\'évènement  déclenché : " + e.type;
+        }
+        */ 
+
+        function TexteD(e){
+            //alert('Stop à la propagation ');
+            //e.StopPropagation();
+            e.preventDefault();
+        }
+
+        function TexteP(){
+            //alert('Ceci ne s\'affichera pas');
+            alert('La méthode preventDefault n\'empêche pas la propagation');
+        }
+    </script>
+    
+</body>
+</html>

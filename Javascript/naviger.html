@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decouverte du DOM HTML</title>
+</head>
+<body>
+    <h1 id="gros_titre">Decouverte du DOM HTML</h1>
+
+    <div>
+        <p class="para">Du texte</p>
+        <p class="para">Un deuxième <strong>paragraphe</strong></p>
+    </div>
+
+    <script>
+        /* var p = document.querySelector('.para');
+        var div = p.parentNode;
+        div.style.color = 'orange';
+        */ 
+
+        /*
+        var b = document.body;
+        //le childNodes prend en compte l'espace, exemple entre div et p 
+        var div = b.childNodes[3];
+
+        var p1 = div.childNodes[1];
+        //elle prend comme un noeud le mot 'du texte ' dans p et pour y acceder, on utilise le "nodeValue"
+        var texte = p1.childNodes[0].nodeValue;
+
+        alert(texte);
+        */ 
+
+        /*
+        var p2 = document.querySelectorAll('.para')[1];
+        var premier = p2.firstChild;
+        var dernier = p2.lastChild;
+
+        var inner1 = premier.nodeValue;//s'utilise sur des noeuds de type texte
+        var inner2 = dernier.innerHTML;
+        */
+
+        /*s'utilise sur des noeuds de type élément
+        ou on peut écrire :
+         var inner2 = dernier.childNodes[0].nodeValue;
+        */
+
+        /*alert('Premier enfant : ' + premier +
+            '\nDernier enfant : ' + dernier);
+
+        */ 
+
+        /*alert('Contenu du premier enfant : ' + inner1 +
+            '\nContenu du dernier enfant : ' + inner2);
+        */ 
+
+        var titre = document.getElementById('gros_titre');
+        var div = titre.nextSibling.nextSibling;
+
+        div.innerHTML = '<p>div totalement ciblé</p>';
+
+    </script>
+</body>
+</html>

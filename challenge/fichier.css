@@ -1,0 +1,95 @@
+#border{
+    width: 1100px;
+    height: 1100px;
+    border: 1px solid cornflowerblue;
+    text-align: center;
+    margin-left: 200px;
+    background: #f6f6f6;
+    margin-top: 50px;
+}
+
+h1{
+    text-align: center;
+    margin-top: 25px;
+    color: royalblue;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+hr{
+    width: 230px;
+    height: 3px;
+    background-color: #333;
+}
+
+h3{
+    color: #555;
+    font-size: 23px;
+}
+
+.gauche{
+    float: left;
+    margin-left: 100px;
+    padding: 1em ;
+    text-align: justify;
+}
+
+.center{
+    float: left;
+    margin-left: -280px;
+    text-align: justify;
+    padding: 1em;
+}
+
+.droite{
+    margin-top: -10px;
+    float: right;
+    margin-right: 15px;
+    text-align: justify;
+    padding: 1em;  
+}
+
+#btn{
+    float: right;
+    margin-right: -400px;
+    margin-top: 280px;
+    background-color: royalblue;
+    color: white;
+    border-radius: 30px;
+    border: 1px solid white;
+    width: 120px;
+    height: 60px;
+}
+
+.radio{
+    color: #333;
+    margin-top: 10px;
+    padding-left: 1px;
+}
+
+#affichage{
+    display: flex;
+    align-items: center;
+    width: 400px;
+    border-radius: 20px;
+    margin-top: 500px;
+    margin-left: 300px;
+    flex-direction: column;
+    background-color: #699df0;
+}
+
+#affichage h1{
+    color: #000;
+    font-size: 20px;
+}
+
+#affichage span{
+    margin: 10px 0;
+    padding: 10px 0;
+    padding-left: 5px;
+    border-radius: 6px;
+    color: #000;
+    word-break: break-all;
+    cursor: pointer;
+    animation: anime 0.5s linear;
+}

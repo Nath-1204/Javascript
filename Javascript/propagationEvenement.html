@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les évènement</title>
+    <style>
+        div{
+            border : 1px solid orange;
+            padding: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="gros_titre">Les évènement</h1>
+    <!--
+        <div id="div">
+            <p>Un premier paragraphe</p>
+            <p>Un deuxième paragraphe</p>
+        </div>
+    -->
+
+    <!--
+        <div id="div1">
+            <p id="p1">Phase de bouillonnement utilisée</p>
+        </div>
+        <div id="div2">
+            <p id="p2">Phase de capture utilisée</p>
+        </div>
+    -->
+    
+    <div id="div1"> 
+        <p id="p1">Un exemple plus <strong>complexe</strong></p>
+    </div>
+    
+
+    <script>
+        /* var div = document.getElementById('div');
+        var p1 = document.querySelector('p');
+
+        div.addEventListener('click', MessageDiv);
+        p1.addEventListener('click', Messagep);
+
+        function MessageDiv(){
+            alert('Evènement du div');
+        }
+
+        function Messagep(){
+            alert('Evènement du paragraphe');
+        }
+        */
+
+        /*
+        var  div1 = document.getElementById('div1');
+        var p1 = document.getElementById('p1');
+        var  div2 = document.getElementById('div2');
+        var p2 = document.getElementById('p2');
+
+        //Phase de bouillement utulisée pour div1 et p1
+        div1.addEventListener('click',MessageDiv1);
+        p1.addEventListener('click',MessageP1);
+
+        function MessageDiv1(){alert('Evènement du div1');}
+        function MessageP1(){alert('Evènement du paragraphe p1');}
+
+        //Phase de capture utilisée pour div2 et p2
+        div2.addEventListener('click',MessageDiv2);
+        p2.addEventListener('click',MessageP2);
+
+        function MessageDiv2(){alert('Evènement du div2');}
+        function MessageP2(){alert('Evènement du paragraphe p2');}
+        */ 
+
+        var body = document.body;
+        var div1 = document.getElementById('div1');
+        var p1 = document.getElementById('p1');
+        var strong = document.querySelector('strong');
+
+        p1.addEventListener('click', CP1, true);
+        strong.addEventListener('click', CS, true);
+        function CP1(){alert('Capture paragraphe');}
+        function CS(){alert('Capture de strong');}
+
+        div1.addEventListener('click', BD1);
+        body.addEventListener('click', BB);
+        function BD1(){alert('Bouillement div');}
+        function BB(){alert('Bouillement body');}
+    </script>
+</body>
+</html>

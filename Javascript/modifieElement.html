@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decouverte du DOM HTML</title>
+</head>
+<body>
+    <h1 id="gros_titre">Decouverte du DOM HTML</h1>
+    <p class="para">Un petit paragraphe et <a href="http://pierre-giraud.com"> un lien</a></p>
+    <p class="para">Deuxième paragraphe</p>
+
+    <script>
+        var titre = document.getElementById('gros_titre');
+        var parent = document.body;
+        var nouveauTitre = document.createElement('h2');
+        nouveauTitre.id = 'titre_moyen';
+        nouveauTitre.innerHTML = 'Titre modifié en Javascript';
+
+        parent.replaceChild(nouveauTitre,titre);
+
+        //parent.removeChild(titre);
+    </script>
+</body>
+</html>

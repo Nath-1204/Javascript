@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les évènements</title>
+</head>
+<body>
+    <h1 id="gros_titre">Les évènements</h1>
+    <p>Cliquez-moi !</p>
+    <p>Un deuxième <strong>paragraphe</strong></p>
+
+    <script>
+        var p1 = document.querySelector('p');
+
+        /*p1.addEventListener('click', changeTexte);
+
+        function changeTexte(){
+            this.innerHTML = '<strong>Bravo !</strong>';
+            this.style.color = "orange";
+        }
+        */ 
+
+        /*p1.addEventListener('click', Message1);
+        p1.addEventListener('click', Message2);
+
+        function Message1(){
+            alert('Premier message');
+        }
+
+        function Message2(){
+            alert('Deuxième message');
+        }
+        */ 
+
+        p1.addEventListener('mouseover', Function1);
+        p1.addEventListener('mouseout', Reset1);
+        p1.addEventListener('mousedown', Function2);
+        p1.addEventListener('mouseup', Reset2);
+
+        function Function1(){
+            this.innerHTML = 'Cliquez-moi maintenant !';
+            this.style.backgroundColor = 'orange';
+        }
+
+        function Reset1(){
+            this.innerHTML = 'Passez sur moi';
+            this.style.backgroundColor = '';
+        }
+
+        function Function2(){
+            this.innerHTML = 'Bravo';
+            this.style.color = '#26C';
+            this.style.fontWeight = 'bold';
+            this.style.fontSize = '24px';
+        }
+
+        function Reset2(){
+            this.innerHTML = 'function Reset2';
+            this.style.color = '';
+            this.style.fontWeight = '';
+            this.style.fontSize = '';
+        }
+
+    </script>
+    
+</body>
+</html>

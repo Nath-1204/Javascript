@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les expressions régulières</title>
+</head>
+<body>
+    <h1 id="titre">Quantifieurs et options</h1>
+    <!--
+        <p>1,10,100</p>
+    -->
+    <p>On  apprend à utuliser les regex en JavaScript</p>
+    <p id="reg"></p>
+
+    <script>
+        var rec = document.querySelector('p').textContent;
+
+        /*
+        var r1 = /10+/g; 
+        //on recherche 1 suivi au moins un 0, le quantifieur + doit se placer juste avant ou après sur lequel il doit agir
+
+        var res1 = rec.match(r1);
+
+        var resultat = document.getElementById('reg');
+        resultat.innerHTML = "Résultat : " + res1;
+        */ 
+
+        /*
+
+        var r1 = /x+/;
+        var res1 = r1.test(rec); //test renvoie true ou false
+
+        var r2 = /e(nd)?/g; // on cherche soit e soit end
+        var res2 = rec.match(r2); //,atch renvoie des objets string
+
+        var r3 = /e$/i; //on verifie si une chaine dans notre paragraphe se termine par e
+        var res3 = r3.test(rec);
+
+        var r4 = /p{2}/; //savoir si notre para contient 2 p à la suite
+        var res4 = r4.test(rec);
+
+        var r5 = /Java(?=Script)/; //savoir si notre paragraphe contient l'expression Java suivie de Script
+        var res5 = r5.test(rec);
+
+        var resultat = document.getElementById('reg');
+        resultat.innerHTML = "Présence d'un 'x' : " + res1 +
+            "<br>Occurrence de 'e' ou 'nd' : " + res2 + 
+            "<br>Chaine fini par un 'e' : " + res3 + 
+            "<br>Contient deux 'p' à la suite ? : " + res4 + 
+            "<br>Présence de 'Java' suivie de 'Script' ? : " + res5;
+        */ 
+
+
+        var rec2 = 'Je suis sur \ndeux lignes en Js';
+
+        var r1 = /on/i;
+        var res1 = rec.match(r1);
+
+        var r2 = /e/g;
+        var res2 = rec.match(r2);
+
+        var r3  = /^d/; //savoir si il y a un d au début de la ligne
+        var res3  = r3.test(rec2);
+
+        var r4 = /^d/m; //savoir si il y a un d au début de chaque ligne
+        var res4 = r4.test(rec2);
+
+        var resultat = document.getElementById('reg');
+        resultat.innerHTML = 
+        "Résultat regex 1 : " + res1 + 
+        "<br>Résultat regex 2 : " + res2 +
+        "<br>Résultat regex 3 : " + res3 +
+        "<br>Résultat regex 4 : " + res4
+
+    </script>
+</body>
+</html>

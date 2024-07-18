@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decouverte du DOM HTML</title>
+</head>
+<body>
+    <h1 id="gros_titre">Decouverte du DOM HTML</h1>
+    <p class="para">Un petit paragraphe et <a href="http://pierre-giraud.com"> un lien</a></p>
+    <p class="para">Deuxième paragraphe</p>
+    <script>
+        /*var titre = document.getElementById('gros_titre');
+        alert(titre);
+        */
+       
+        /*
+        var titre = document.getElementsByTagName('p');
+        alert('Notre page contient : ' + titre.length + ' paragraphes ');
+        */
+
+        /*var tableau = document.getElementsByClassName('para');
+        alert('Notre page contient : ' + tableau.length + ' paragraphe(s) portant la class para' );
+        */ 
+
+        /*var lien = document.querySelector('p a');
+        var p = document.querySelectorAll('.para');
+
+        alert('Information dans lien : ' + lien +
+            '\nDans p[0] : ' +p[0]+
+            '\nDans p[1] : ' +p[1]);
+        */ 
+
+        /*var titre = document.getElementById('gros_titre').innerHTML;
+        alert(titre);
+        */ 
+
+        /*var p = document.querySelector('.para').innerHTML;
+        var t = document.querySelector('.para').textContent;
+        alert('Contenu récuperé avec innerHTML : \n' + p +
+            '\n\nContenu récuperé avaec textContent : \n' + t );
+        */ 
+
+        var titre_page = document.title;
+        var page  = document.body;
+        var lien = document.links;
+
+        /*alert('Contenu du titre_page : ' + titre_page +
+            '\nContenu de page : ' + page +
+            '\nContenu du lien : ' + lien);
+        */
+
+        alert('Contenu du titre_page : ' + titre_page +
+            '\nContenu de page : ' + page +
+            '\nContenu du lien : ' + lien[0]);
+    </script>
+</body>
+</html>

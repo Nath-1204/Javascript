@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les objets en Javascript</title>
+</head>
+<body>
+    <h1>Les objets en Javascript</h1>
+    <script>
+        /*var datelit = Date();
+        var datems = Date.now();
+
+        alert('Date littérale : ' +datelit +
+            '\nDate sous forme de ms : ' +datems);
+        */
+        
+        /*var d = new Date(0);
+        alert(d);
+        */
+
+        /*var d1 = new Date(2015,6,15,12,30,20,110);
+        var d2 = new Date(2015,6,15);
+
+        alert('date 1 : ' +d1+
+            '\ndate 2 : ' +d2);
+        */
+
+        var diso1 = new Date("2015-06-15");
+        var diso2 = new Date("2015-06-15T12:00:00");
+
+        var dcourte = new Date("06/15/2015");
+        var dlongue = new Date("January 25 2015 09:00:00");
+        
+        var dcomp = new Date('Sun Jan 25 2015 09:00:00 GMT +03:00');
+
+        alert('Date ISO courte : ' + diso1+
+            '\nDate ISO complète : ' + diso2 +
+            '\nDate courte : ' + dcourte +
+            '\nDate longue : ' + dlongue +
+            '\nDate complète : ' + dcomp);
+    </script>
+    
+</body>
+</html>

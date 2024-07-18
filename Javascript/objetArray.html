@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les objets en Javascript</title>
+</head>
+<body>
+    <h1>Les objets en JAVASCIPT</h1>
+    <script>
+        // var prenoms = ['Natacha', 'Safidy', 'Jacque', 'Pierre'];
+
+        /* prenoms[0] = 'Ronald';
+
+            alert(prenoms[0]);
+        */
+
+        //alert('Notre tableau contient ' + prenoms.length + ' éléments');
+
+        /*prenoms[prenoms.length] = 'Ronald';
+        prenoms[prenoms.length] = 'Safidy';
+
+        alert('On a ajouté ' + prenoms[4] + ' et ' + prenoms[5] + ' à notre tableau');
+        */
+
+        /*var p = '';
+
+        for(var i = 0; i < prenoms.length; i++){
+            p+= 'Prenom n*' +(i+1) + ' : ' + prenoms[i] + '\n';
+        }
+
+        alert(p);
+        */
+
+        //Objet litéral
+        var prenoms = {
+            prenom1 : "Chloé",
+            prenom2 : "Ronald",
+            prenom3 : "Sonia",
+            prenom4 : "Sitraka"
+        }, p = '';
+        
+        for(var clefs in prenoms){
+            p+= clefs + ' : ' + prenoms[clefs] + '\n';
+        }
+        alert(p);
+    </script>
+</body>
+</html>

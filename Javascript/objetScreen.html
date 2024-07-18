@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Objet Model</title>
+</head>
+<body>
+    <h1 id="titre">L'objet Screen</h1>
+    <p></p>
+
+    <script>
+        var hauteur = screen.height;
+        var hauteurDispo = screen.availHeight;
+        var reso = screen.pixelDepth;
+
+        var para = document.querySelector('p');
+        para.innerHTML = 
+            'Hauteur de l\'ecran : ' + hauteur + 
+            '<br>Hauteur disponible : ' + hauteurDispo + 
+            '<br>Résolution : ' + reso + ' bits/px';
+    </script>
+    
+</body>
+</html>

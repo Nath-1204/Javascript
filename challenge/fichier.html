@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+    <link rel="stylesheet" href="./fichier.css">
+</head>
+<body>
+    <div id="border">
+        <h1>Modifier mon profile</h1>
+        <hr>
+        <div class="gauche">
+            <h3>Nom</h3>
+            <input type="text" id="textfield1">
+            <h3>Email</h3>
+            <input type="email" placeholder=" monemail@demo.fr" id="textfield2">
+            <h3>Adresse</h3>
+            <input type="text" id="textfield3"><br><br>
+            <div class="radio">
+                <input type="radio" name="option1" id="radio" value="newsletter">Je souhaite recevoir le newsletter</input>
+                <input type="radio" name="option2" id="radio" value="newsletter_delete">Je souhaite recevoir le newsletter delete</input>
+            </div>
+        </div>
+        <div class="center">
+            <h3>Prénom</h3>
+            <input type="text" id="textfield4">
+            <h3>Téléphone(mobile)</h3>
+            <input type="number" id="textfield5">
+            <h3>Ville</h3>
+            <input type="text" id="textfield6"><br><br>
+        </div>
+        
+        <div class="droite">
+            <h3>Bio</h3>
+            <textarea name="bio" id="" cols="50" rows="15" id="textfield7"></textarea>
+        </div>
+        <br><br>
+        <button type="submit" id="btn">Enregistrer</button>
+        <div id="affichage" hidden>
+            <h1>Nom: <span id="name"></span></h1>
+            <h1>Prénom: <span id="firstname"></span></h1>
+            <h1>Email: <span id="email"></span></h1>
+            <h1>Téléphone(mobile): <span id="tel"></span></h1>
+            <h1>Adresse: <span id="adresse"></span></h1>
+            <h1>Ville: <span id="ville"></span></h1>
+            <h1>Bio: <span id="bio"></span></h1>
+        </div>
+    </div>
+
+    <script src="./fichier.js" defer></script>
+
+</body>
+</html>

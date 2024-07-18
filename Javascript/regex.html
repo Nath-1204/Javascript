@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decouverte des REGEX</title>
+</head>
+<body>
+    <h1 id="titre">Les expressions régulières</h1>
+    <p>Engagez vous qu'ils disaient, engagez vous qu'ils disaient !</p>
+    <p id="reg"></p>
+    
+    <script>
+        /*
+        var r = /Pierre/i;
+        // i: signifie ignorer la casse
+        */ 
+
+        //Recherches et Remplacements
+
+        /*
+        var expr = document.querySelector('p');
+
+        var r1 = /engagez/i;
+        var r2 = /engagez/ig; //insensible à la casse et recherche globale
+
+        var res1 = expr.textContent.match(r1);
+        var res2 = expr.textContent.match(r2);
+
+        var resultat = document.getElementById('reg');
+        resultat.innerHTML = 
+            'Rèsultat match() sur regex 1 : ' + res1 +
+            '<br>Résultat match() sur regex 2 : ' + res2;
+        */ 
+
+        /*
+
+        var expr = document.querySelector('p');
+
+        var r1 = /engagez/i;
+        var r2 = /engagez/; //position du mot engagez dans le paragraphe
+
+        var res1 = expr.textContent.search(r1);
+        var res2 = expr.textContent.search(r2);
+
+        var resultat = document.getElementById('reg');
+        resultat.innerHTML = 
+            'Rèsultat search() sur regex 1 : ' + res1 +
+            '<br>Résultat search() sur regex 2 : ' + res2;
+        */ 
+
+        /*
+        var expr = document.querySelector('p');
+
+        var r1 = /vous/i; //seule le premier vous est remplacé
+        var r2 = /vous/ig; //cherche et remplace tous les mots 'vous' par "moi" qui se trouve dans le paragraphe
+
+        var res1 = expr.textContent.replace(r1 , 'moi');
+        var res2 = expr.textContent.replace(r2 , 'moi');
+
+        var resultat = document.getElementById('reg');
+        resultat.innerHTML = 
+            'Rèsultat replace() sur regex 1 : ' + res1 +
+            '<br>Résultat replace() sur regex 2 : ' + res2;
+        */ 
+
+
+        /*
+        var rec = document.querySelector('p').textContent;
+
+        var r1 = /ENGAGEZ/;
+        var r2 = /ENGAGEZ/i; //recherche la chaine dans un paragraphe, return true si vrai
+
+        var res1 = r1.test(rec);
+        var res2 = r2.test(rec);
+
+        var resultat = document.getElementById('reg');
+        resultat.innerHTML = 'Résultat 1 :' + res1 +
+            '<br>Résulat 2 : ' + res2;
+        */ 
+
+        var rec = document.querySelector('p').textContent;
+
+        var r1 = /aient/;
+        var res1 = r1.exec(rec);
+        //cherche dans un chaine et il renvoie une nouvelle fois et un seul fois ,s'il est là sinon null
+
+        var resultat = document.getElementById('reg');
+        resultat.innerHTML = 'Résultat 1 :' + res1;
+    
+    </script>
+    
+</body>
+</html>

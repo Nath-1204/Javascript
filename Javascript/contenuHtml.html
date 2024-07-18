@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decouverte du DOM HTML</title>
+</head>
+<body>
+    <h1 id="gros_titre">Decouverte du DOM HTML</h1>
+    <p class="para">Un petit paragraphe et <a href="http://pierre-giraud.com"> un lien</a></p>
+    <p class="para">Deuxième paragraphe</p>
+
+    <script>
+        /*var titre = document.getElementById('gros_titre');
+                var texteTitre = titre.innerHTML;
+
+                var textePara = document.querySelector('.para').textContent;
+
+                alert('Titre : ' + texteTitre + 
+                    '\nParagraphe : ' + textePara);
+        */ 
+
+        //document.getElementById('gros_titre').innerHTML += ' <mark>et de la modification en Javascript</mark>';
+
+        //document.querySelector('a').href = 'http://wikipedia.org';
+        //document.querySelector('.para').className = 'para1';
+
+        document.getElementById('gros_titre').style.color = 'orange';
+        document.getElementById('gros_titre').style.fontSize = '40px';
+    </script>
+    
+</body>
+</html>

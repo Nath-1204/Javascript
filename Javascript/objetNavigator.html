@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Objet Model</title>
+</head>
+<body>
+    <h1 id="titre">L'Objet Navigator</h1>
+    <p></p>
+
+    <script>
+        /*
+        var langue = navigator.language;
+        var navigateur = navigator.appName;
+        var version = navigator.appVersion;
+        var moteur = navigator.product;
+        var cookieA = navigator.cookieEnabled;
+
+        var para = document.querySelector('p');
+        para.innerHTML = 
+            'Langue utilisé : ' + langue +
+            '<br>Nom de la navigateur : ' + navigateur +
+            '<br>Version : ' + version + 
+            '<br>Moteur : ' + moteur + 
+            '<br>Cookie ? : ' + cookieA;
+        */ 
+
+        var para = document.querySelector('p');
+        var loc = navigator.geolocation;
+
+        (function (){
+            if(loc){
+                loc.getCurrentPosition(coordonnes);
+            }else{
+                para.innerHTML = 'Localisation non disponible ';
+            }
+        })();
+
+        function coordonnes(x){
+            para.innerHTML = 
+                'Latitude : ' + x.coords.latitude + 
+                '<br>Longitude : ' + x.coords.longitude;
+        }
+    </script>
+    
+</body>
+</html>

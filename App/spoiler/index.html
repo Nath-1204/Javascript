@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+
+        body{
+            color: #424242;
+            font-family: sans-serif;
+        }
+
+        .spoiler button{
+            background-color: #B9E937;color: #424242;
+            border: none;
+            border: 1px solid #00B906;
+            cursor: pointer;
+        }
+
+        .spoiler-content{
+           display: inline-block;
+           width: 0;
+           height: 0;
+           opacity: 0;
+           overflow: hidden;
+           transition: opacity 0.5s;
+        }
+
+        .spoiler-content.visible{
+             display: inline;
+             width: auto;
+             height: auto;
+             opacity: 1;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident corporis esse odit quas veritatis praesentium quasi quis nobis, rem ipsa architecto dolorem soluta laboriosam possimus eius neque officiis deserunt minus tempore ex repellat odio? Adipisci assumenda deleniti odit totam veritatis quos deserunt unde sapiente eveniet dolore mollitia maiores neque, eaque omnis saepe amet quia qui officia, delectus eligendi laboriosam.
+    </p>
+
+    <p class="spoiler">
+       Monsieur X meurt à la fin
+    </p>
+
+    <p>
+        <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, iure, odio quaerat asperiores officia, itaque quas pariatur veniam mollitia porro fugiat. Consectetur nostrum tenetur officia culpa dicta illum consequuntur recusandae quo neque veniam. Voluptatem maxime nulla reiciendis commodi nihil autem impedit itaque pariatur dicta praesentium repudiandae labore dolore rem, expedita in veniam beatae aspernatur? Et reiciendis nobis aut fugiat natus?</span>
+        <span> Consequuntur quam ipsa velit error molestiae tempora eius voluptas. <span class="spoiler">Nesciunt reprehenderit aspernatur</span>  culpa neque, error quam ad laboriosam repellat iure qui velit nam at suscipit sed pariatur placeat assumenda, consectetur possimus! Recusandae voluptate excepturi fugit possimus, blanditiis laudantium non dolores doloremque quisquam quia a aliquam odio quae harum nobis saepe eos ratione.</span>
+        <span>Magni dignissimos, <span class="spoiler"> voluptas quod placeat voluptatem consequuntur cupiditate autem saepe</span>, omnis natus repellendus quibusdam libero, culpa rerum architecto beatae? Dolores officiis tenetur, ea nihil quam aspernatur libero ipsum totam alias accusamus autem animi saepe corrupti eum eveniet expedita voluptate est adipisci sint excepturi. Quia necessitatibus enim nesciunt consectetur praesentium iusto dolore. Consequuntur!</span>
+    </p>
+
+
+    <script src="spoiler.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les objets en Javascript</title>
+</head>
+<body>
+    <h1>Les objets en Javascript</h1>
+    <script>
+        //var prenoms = ['Bille', 'Boul', 'Balou', 'Bouba'], p = '';
+        /*var taille = prenoms.push('Flor','Chloé');
+
+        for(var i=0; i < prenoms.length; i++){
+            p+= 'Prénoms n*' + (i+1) + ' : ' + prenoms[i] + '\n';
+        }
+
+        alert('Le tableau contient ' + taille + ' éléments : \n\n' + p);
+        */
+
+        /*var suppr = prenoms.pop();
+        for(var i=0; i < prenoms.length; i++){
+            p+= 'Prénoms n*' + (i+1) + ' : ' + prenoms[i] + '\n';
+        }
+        
+        alert(p + '\n\nNous avons supprimé ' +suppr+ ' du tableau');
+        */
+
+        /*var taille = prenoms.unshift('Flor', 'Chloé');
+        for(var i=0; i < prenoms.length; i++){
+            p+= 'Prénoms n*' + (i+1) + ' : ' + prenoms[i] + '\n';
+        }
+
+        alert('Notre tableau contient ' + taille + ' prénoms : \n\n' + p);
+        */
+        
+        /*var suppr = prenoms.shift();
+        for(var i=0; i < prenoms.length; i++){
+            p+= 'Prénoms n*' + (i+1) + ' : ' + prenoms[i] + '\n';
+        }
+        alert('Nouveau tableau : \n' + p + '\n\nPrénoms supprimé : ' + suppr);
+        */
+
+        //prenoms.splice(1,0,'Florian','chloé');
+        /*prenoms.splice(1,3);
+        for(var i=0; i < prenoms.length; i++){
+            p+= 'Prénoms n*' + (i+1) + ' : ' + prenoms[i] + '\n';
+        }
+
+        alert('Nouveau tableau : \n\n' + p);
+        */
+        
+        /*prenoms.sort();
+
+        for(var i = 0; i < prenoms.length; i++){
+            p+= 'Prénoms n° ' + (i+1) + ' : ' + prenoms[i] + '\n';
+        }
+
+        alert('Nouveau tableau : \n\n' + p);
+        */
+
+        /*prenoms.sort();
+        prenoms.reverse();
+
+        for(var i = 0; i < prenoms.length; i++){
+            p+= 'Prénoms n° ' + (i+1) + ' : ' + prenoms[i] + '\n';
+        }
+
+        alert('Nouveau tableau : \n\n' + p);
+        */
+        
+        /*var chaine = prenoms.join('/');
+
+        for(var i = 0; i < prenoms.length; i++){
+            p+= 'Prénoms n° ' + (i+1) + ' : ' + prenoms[i] + '\n';
+        }
+
+        alert('Notre tableau : \n' + p +
+        '\nLa chaine renvoyée par join() : ' + chaine);
+        */
+
+        /*var garcons = prenoms.slice(0,2);
+        for(var i = 0; i < prenoms.length; i++){
+            p+= 'Prénoms n° ' + (i+1) + ' : ' + prenoms[i] + '\n';
+        }
+
+        alert('Notre tableau de base : ' + prenoms + 
+              '\nLe tableau créé par slice() : ' + garcons);
+        */
+        
+        var garcons = ['Pierre', 'Victor', 'Florian'];
+        var fille = ['Julia', 'Claire'];
+        var animaux  = ['Bubulle','Minouche'];
+
+        /*var gf = garcons.concat(fille);
+        var fg = fille.concat(garcons);
+
+        alert('Valeurs du tableau garcons : ' + garcons +
+            '\nValeurs du tableau filles : ' + fille +
+            '\nValeurs du tableau gf : '+gf+
+            '\nValeurs du tableau fg : ' + fg);  
+        */
+
+        var fusion = garcons.concat(fille,animaux);
+
+        alert('Fusion : ' +fusion);
+    </script>
+    
+</body>
+</html>

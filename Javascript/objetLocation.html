@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Objet Model</title>
+</head>
+<body>
+    <h1 id="titre">L'Objet Location</h1>
+    <button id="charger">Charger un nouveau document</button>
+    <button id="recharger">Recharger le document</button>
+    <button id="changer">Remplacer le document</button>
+    <p></p>
+
+    <script>
+        var para = document.querySelector('p');
+        var charger = document.getElementById('charger');
+        var recharger = document.getElementById('recharger');
+        var changer = document.getElementById('changer');
+
+        charger.addEventListener('click', charge);
+        recharger.addEventListener('click', recharge);
+        changer.addEventListener('click', change);
+
+        function charge(){
+            location.assign('http://pierre-giraud.com');
+        }
+
+        function recharge(){
+            location.reload();
+        }
+
+        function change(){
+            location.replace('http://pierre-giraud.com');
+        }
+
+        var url = location.href;
+        var chemin = location.pathname;
+
+        para.innerHTML = 'URL : ' + url + '<br>Chemin : ' + chemin;
+    </script>
+</body>
+</html>

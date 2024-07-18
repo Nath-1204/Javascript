@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notions avancées sur les functions</title>
+</head>
+<body>
+    <h1>Notions avancées sur les functions</h1>
+    <script>
+        function compteur(){
+            var i = 0;
+
+            return function(){
+                return i++;
+            }
+        }
+
+        //alert(compteur());
+
+        var plusUn = compteur();
+        var autreInstance = compteur();
+
+        alert('Premier tour : ' + plusUn() +
+            '\nDeuxième tour : ' + plusUn() +
+            '\nTroisième tour : ' + plusUn() +
+            '\nPremier tour autre instance : ' + autreInstance());
+    </script>
+</body>
+</html>
